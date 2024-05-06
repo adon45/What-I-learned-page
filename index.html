@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="what.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Document</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header><b>Navigation</b></header>
+      <ul>
+        <a href="#HTML" class="nav-link"><li>HTML</li></a>
+        <a href="#CSS" class="nav-link"> <li>CSS</li></a>
+        <a href="#JavaScript_and_Java" class="nav-link"><li>JavaScript and Java</li></a>
+        <a href="#Frontend" class="nav-link"><li>Frontend</li></a>
+        <a href="#Backend" class="nav-link"><li>Backend</li></a>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="HTML">
+        <header>HTML</header>
+        <p>When coding in HTML, the most important thing is learning the syntax. Without that base knowledge, you will be lost when studying HTML codes. 
+          There are many ways to learn this but you will never be able to apply the syntax untill you practice. I have listed a few suggestions below 
+          but make sure that once you start you stick with it.</p>
+          <ul>
+            <li>HTML, in short, is the language that tells the browser what is on screen. The syntax dictates how the informaiton shows on screen. There are
+              many different elements involved in HTML but once you learn the basics of the syntax, it becomes much easier to read code. Of course the best 
+              way to learn coding is to simply start coding. </li>
+              <li>The best site I have found for learning is freeCodeCamp.com. This cite will teach you by having you complete coding tasks which is the best way to  
+                not only learn but remeber what you learned! </li>
+          </ul>
+      </section>
+      <section class="main-section" id="CSS">
+        <header>CSS</header>
+        <p>The most important thing to remeber about CSS code is that each selector is used to target the specified class. It took me a while to learn how different 
+          elements effect the class or id and that comes with practice. The syntax isn't difficult, but remembering all of the properties and thier effect can be tricky,
+          especially paddding, margin, content, and border. These three can seem interchangable but they are much more complex than you may thnk;  for example:</p><br>
+          
+          <code>
+            #navbar {<br>
+              background-color: lightgrey;<br>
+              flex-direction: column;<br>
+              width: 200px;<br>
+              min-width: fit-content;<br>
+              height: 100%;<br>
+              position: fixed;<br>
+              color: darkslategrey;<br>
+              border-right: 2px solid darkslategray<br>
+            }   <br>
+          </code>
+        
+          <p>This code is what I used to make the navigation bar on the left (there is actually more to get the exact design you see but you get the point). These 
+            properties take a while to grasp but once it clicks it becomes so much easier. Here is a simple explination of each property: <br>
+            <ul class="vs">
+              <li><heade id=content>Content</header> &ndash; The content of the box, where text and images appear</li>
+              <li><heade id="padding">Padding</header> &ndash; Clears an area around the content. The padding is transparent</li>
+              <li><heade id="border">Border</header> &ndash; A border that goes around the padding and content</li>
+              <li><heade id="margin">Margin</header> &ndash; Clears an area outside the border. The margin is transparent</li>
+            </ul>
+          </p>
+          <p>I have found ist easier to start my CSS stylesheets with this code:</p>
+          
+          <code>
+            /* Reset styles */<br>
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {<br>
+  margin: 0;<br>
+  padding: 0;<br>
+}<br>
+           </code>
+          
+           <p >This resets all of the margin and padding to zero and allows you to start from scratch.</p>
+      </section>
+      <section class="main-section" id="JavaScript_and_Java">
+        <header>JavaScript and Java</header>
+        <p>I'll be honest; I don't know much about Javascript; but I do know it needs to be implemented to make a modern website</p>
+        <p>I did find one fun fact: you can use "userscript" in chrome to add your own funtions to use while surffing the web, for instance; I 
+          downloaded the "tampermonkey" extension on Chrome and used this function:<br></p>
+          
+            <code>
+              (function() {<br>
+                'use strict';<br>
+                   if (event.key === "Shift") {<br>
+                    <br>
+                // Function to search Google for highlighted text<br>
+                function searchGoogle() {<br>
+                    var selection = window.getSelection().toString();<br>
+            
+                         if (selection) {<br>
+                        var url = "https://www.google.com/search?q=" + encodeURIComponent(selection);<br>
+                        window.open(url, "_blank");<br>
+                         }<br>
+                    }<br>
+                }<br>
+                <br>
+                // Register keyboard shortcut<br>
+                GM_registerMenuCommand("Search Google for Highlighted Text", searchGoogle);<br>
+            })();<br>
+            </code>
+          
+          <p>This function lets me highlight text online and quicly google it in a new tab. Here is a list of what  I do know:</p>
+        <ul>
+          <li>It's important</li>
+          <li>It's cool</li>
+          <li>It can do alot!</li>
+        </ul>
+      </section>
+      <section class="main-section" id="Frontend">
+        <header>Frontend</header>
+        <p>Frontend is pretty much what you see when you open a website and the primary languages are HTML and CSS. The best way to learn this is to 
+          figure out some HTML and CSS codes and try it out. Thats that I did and quickly learned that .classes are super importamt for example </p><br>
+          
+            <code>
+              "(section class="main-section)"<br>
+           </code>
+          
+          <p>This class selector allowed me to use the following CSS to make this page:</p><br>
+          
+            <code>
+              #main-doc {<br>
+                padding-left: 250px;<br>
+                padding-top: 50px;<br>
+                line-height: 1.5;<br>
+              }<br>
+            </code>
+          
+          <p>This section of code is in my CSS stylesheet and makes this site much easier to read.</p>
+      </section>
+      <section class="main-section" id="Backend">
+        <header>Backend</header>
+        <p>I put everything I knew in the Javascript section. Other than that I can say that there is so much to learn about backend.</p>
+      </section>
+    </main>
+  </body>
+</html>
